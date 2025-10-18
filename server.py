@@ -151,5 +151,6 @@ def list_users():
     })
 
 if __name__ == '__main__':
-    context = ('cert.pem', 'key.pem')  # 🔒 добавляем сертификаты
-    app.run(host='0.0.0.0', port=5000, debug=True, ssl_context=context)
+     # 🔒 добавляем сертификаты
+  port = int(os.environ.get("PORT", 5000))
+app.run(host="0.0.0.0", port=port)
